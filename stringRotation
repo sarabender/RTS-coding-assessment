@@ -1,0 +1,8 @@
+function stringRotation(original, rotation) {
+    const shift = (rotation % original.length) * -1;
+    return original.slice(shift) + original.slice(0, shift);
+}
+
+console.log(stringRotation("MyString", 2));
+
+//Taking into account slice stopping after passing over the max length of the string
