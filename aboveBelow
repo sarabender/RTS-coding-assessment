@@ -1,0 +1,16 @@
+function aboveBelow(integers, target) {
+    let above = 0;
+    let below = 0;
+
+    integers.forEach(integer => {
+        if (integer > target) {
+            above++;
+        } else if (integer < target) {
+            below++;
+        }
+    });
+
+    return {above, below};
+}
+
+console.log(aboveBelow([1, 5, 2, 1, 10], 6));
